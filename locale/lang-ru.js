@@ -178,11 +178,11 @@ SnapTranslator.dict.ru = {
     'language_name':
         'Русский', // the name as it should appear in the language menu
     'language_translator':
-        'Svetlana Ptashnaya, Artem Proskurnev, Pavel Belousov, Nikita Turchanskiy', // your name for the Translators tab
+        'Svetlana Ptashnaya, Проскурнёв Артём, Nikita Turchanskiy', // your name for the Translators tab
     'translator_e-mail':
-        'svetlanap@berkeley.edu, tema@school830.ru, pbsite@mail.ru, nikturchansky@gmail.com', // optional
+        'svetlanap@berkeley.edu, tema@school830.ru, nikturchansky@gmail.com', // optional
     'last_changed':
-        '2021-01-20', // this, too, will appear in the Translators tab
+        '2017-12-29', // this, too, will appear in the Translators tab
 
     //cloud menu
     'Login...':
@@ -424,7 +424,7 @@ SnapTranslator.dict.ru = {
     'show':
         'показаться',
     'hide':
-        'скрыть',
+        'спрятаться',
     'shown?':
         'показаться',
     'go to %layer layer':
@@ -855,7 +855,7 @@ SnapTranslator.dict.ru = {
     'About...':
         'О программе...',
     'Snap! website':
-        'Веб-сайт программы Snap!',
+        'Веб-сайт Снап!',
     'Download source':
         'Загрузить исходники программы',
     'Switch back to user mode':
@@ -1247,7 +1247,7 @@ SnapTranslator.dict.ru = {
     'Browser':
         'Браузер',
     'Examples':
-        'Примеры',
+        'Проекты',
     
     
     // buttons

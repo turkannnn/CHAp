@@ -78,7 +78,7 @@ Animation, BoxMorph, BlockEditorMorph, BlockDialogMorph, Note, ZERO, BLACK*/
 
 // Global stuff ////////////////////////////////////////////////////////
 
-modules.gui = '2021-January-21';
+modules.gui = '2021-January-11';
 
 // Declarations
 
@@ -217,7 +217,7 @@ IDE_Morph.prototype.init = function (isAutoFill) {
     MorphicPreferences.globalFontFamily = 'Helvetica, Arial';
 
     // restore saved user preferences
-    this.userLanguage = null; // user language preference for startup
+    this.userLanguage = 'ru'; // user language preference for startup
     this.projectsInURLs = false;
     this.applySavedSettings();
 
@@ -237,7 +237,7 @@ IDE_Morph.prototype.init = function (isAutoFill) {
 
     // logoURL is disabled because the image data is hard-copied
     // to avoid tainting the world canvas
-    // this.logoURL = this.resourceURL('src', 'snap_logo_sm.png');
+    this.logoURL = this.resourceURL('src', 'snap_logo_sm.png');
 
     this.logo = null;
     this.controlBar = null;
@@ -661,9 +661,7 @@ IDE_Morph.prototype.createLogo = function () {
     // hard-copied here to avoid tainting the world canvas. This lets us
     // use Snap's (and Morphic's) color pickers to sense any pixel which
     // otherwise would be compromised by annoying browser security.
-
-    // this.logo.texture = this.logoURL; // original code, commented out
-    this.logo.texture = "data:image/png;base64," +
+this.logo.texture = "data:image/png;base64," +
         "iVBORw0KGgoAAAANSUhEUgAAACwAAAAYCAYAAACBbx+6AAAKiklEQVRYR5VXe3BU5RX/" +
         "ne+7924SwiOEJJvwUCAgCZFBEtRatIlVlATLIwlFsCgdeYWICu1MfbKUabVVtBoDQlUc" +
         "FCubEIpAAEUTrGhFGIXAAjZCFdhNQiTkQbK7997vdO7SREAo9P5zZ77HOb9zzu87D8JV" +
@@ -720,6 +718,8 @@ IDE_Morph.prototype.createLogo = function () {
         "0xE09MezY9mpQp7i87IHwOJ0IiRcSNOIAdkRmZEJ5D9/VBCtnsd7nAAAAABJRU5ErkJg" +
         "gg==";
 
+    this.logo.texture = this.logoURL; // original code, commented out
+    
     this.logo.render = function (ctx) {
         var gradient = ctx.createLinearGradient(
                 0,
@@ -4234,7 +4234,7 @@ IDE_Morph.prototype.aboutSnap = function () {
         module, btn1, btn2, btn3, btn4, licenseBtn, translatorsBtn,
         world = this.world();
 
-    aboutTxt = 'Snap! 6.5.2 - dev -\nBuild Your Own Blocks\n\n'
+    aboutTxt = 'Snap! 6.5.1\nBuild Your Own Blocks\n\n'
         + 'Copyright \u24B8 2008-2021 Jens M\u00F6nig and '
         + 'Brian Harvey\n'
         + 'jens@moenig.org, bh@cs.berkeley.edu\n\n'
